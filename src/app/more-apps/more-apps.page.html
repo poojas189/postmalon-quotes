@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>More Apps</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="app-content">
+    <ion-row>
+      <ion-col size="6" *ngFor="let item of myApps">
+        <ion-card class="app-card" (click)="navigateToApp(item.navigationLink)">
+          <img [src]="item.imagesrc" [alt]="item.appName" />
+          <ion-text class="title" color="dark">
+            <h6 class="ion-text-center ion-no-margin">
+              {{item.appName}}
+            </h6>
+          </ion-text>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </div>
+</ion-content>

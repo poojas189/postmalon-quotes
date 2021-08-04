@@ -1,0 +1,63 @@
+<ion-app>
+  <ion-header>
+    <ion-toolbar color="primary">
+      <ion-title color="light">
+        {{headerLabel || categoryTitle}}
+      </ion-title>
+      <ion-buttons *ngIf="!displayBackIcon" slot="start" (click)="toggleMenu()">
+        <ion-menu-button color="light" autoHide="false"></ion-menu-button>
+      </ion-buttons>
+      <ion-buttons *ngIf="displayBackIcon" slot="start" class="arrow-btn" (click)="onGoBack()">
+          <ion-icon color="light" name="arrow-back"></ion-icon>
+      </ion-buttons>
+      <!-- <ion-buttons *ngIf="displayHomeIcon" slot="end" (click)="onHome()">
+        <ion-icon color="light" name="home" class="home-btn"></ion-icon>
+      </ion-buttons> -->
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-menu content-id="main-content" type="overlay">
+    <div class="logo-wrapper">
+      <img src="assets/images/tupac.png">
+    </div>
+    <h3 class="love-air">
+        Post Malone Quotes
+      </h3>
+    <ion-content id="main-content">
+      <ion-list lines="inset" class="ion-list ion-margin-top">
+        <ion-item button (click)="onSelectCategory()">
+          <ion-icon name="home"></ion-icon>
+          Categories
+        </ion-item>
+        <ion-item button (click)="onGoToFavourite()">
+          <ion-icon name="heart"></ion-icon>
+          Favourite
+        </ion-item>
+        <ion-item button (click)="onRateUs()">
+          <ion-icon name="star"></ion-icon>
+          Rate 5 Stars
+        </ion-item>
+        <ion-item button (click)="ShareGeneric()">
+          <ion-icon name="share-social"></ion-icon>
+          Share
+        </ion-item>
+        <ion-item button (click)="onMoreApps()">
+          <ion-icon name="grid"></ion-icon>
+          More Apps
+        </ion-item>
+      </ion-list>
+      <div class="logo-wrapper">
+        <!-- <img class="logo-image" src="./../assets/icon/left-menu-icon.png"> -->
+      </div>
+    </ion-content>
+  </ion-menu>
+
+  <div class="app-background">
+    <img src="assets/images/bg.jpg">
+  </div>
+  <ion-router-outlet id="content1" main></ion-router-outlet>
+</ion-app>
+
+
+
+

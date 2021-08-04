@@ -1,0 +1,22 @@
+.card-bg-primary {
+  border-radius: 12px;
+  margin: 12px;
+  ion-card-header {
+    padding: 14px 16px;
+  }
+  ion-card-title {
+    font-size: 22px;
+  }
+  .quote-count {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .quote-title {
+    text-transform: capitalize;
+    font-family: 'raleway-reg', serif;
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 0.8px;
+  }
+}

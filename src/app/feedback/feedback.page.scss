@@ -1,0 +1,20 @@
+.mail-btn {
+    text-transform: lowercase;
+    --background: var(--ion-color-primary-shade);
+}
+
+.main {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.contact-image {
+    padding-top: 30px;
+}
+
+h5 {
+    font-weight: 400;
+}

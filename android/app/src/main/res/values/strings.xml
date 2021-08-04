@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Post Malone Quotes</string>
+    <string name="title_activity_main">Post Malone Quotes</string>
+    <string name="package_name">com.corlogix.postmalone</string>
+    <string name="custom_url_scheme">com.corlogix.postmalone</string>
+</resources>

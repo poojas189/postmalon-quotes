@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Post Malone Quotes</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card *ngFor="let quote of quotesData" class="card-bg-primary" (click)="navigateToQuotelist(quote.id)">
+    <ion-card-header>
+      <ion-card-title color="dark">
+          <ion-row>
+            <ion-col class="quote-title ion-text-center" size="12">
+                {{quote.title}}
+            </ion-col>
+          </ion-row>
+      </ion-card-title>
+    </ion-card-header>
+  </ion-card>
+</ion-content>
+
