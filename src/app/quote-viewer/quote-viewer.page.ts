@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { SocialSharing } from '@ionic-native/social-sharing/ngx';
@@ -21,7 +21,6 @@ export class QuoteViewerPage implements OnInit {
   constructor(
     public route: ActivatedRoute,
     private socialSharing: SocialSharing,
-    private http: HttpClient,
     private admobService: AdmobService,
     public datahandlerService: DatahandlerService,
     public toastController: ToastController

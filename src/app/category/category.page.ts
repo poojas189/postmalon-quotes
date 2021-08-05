@@ -1,5 +1,4 @@
 import { DatahandlerService } from './../services/datahandler.service';
-import { HttpClient } from '@angular/common/http';
 import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { IonContent } from '@ionic/angular';
@@ -13,8 +12,9 @@ import { DataService } from '../services/data.service';
 export class CategoryPage implements OnInit, AfterViewInit {
   @ViewChild(IonContent) content: IonContent;
   quotesData: any;
+  isLoading: boolean = true;
 
-  constructor(private http: HttpClient, public datahandlerService: DatahandlerService,
+  constructor(public datahandlerService: DatahandlerService,
     public router: Router, public dataService: DataService) { }
 
   ngAfterViewInit(): void {
@@ -24,6 +24,7 @@ export class CategoryPage implements OnInit, AfterViewInit {
   ngOnInit() {
     this.datahandlerService._quoteDatabaseSubject.subscribe(data => {
       this.quotesData = data;
+      this.isLoading = false;
     });
   }
 

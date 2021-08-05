@@ -54,7 +54,7 @@ export class AppComponent {
 
   initializeApp() {
     this.platform.ready().then(() => {
-      this.statusBar.backgroundColorByHexString("#cc931f");
+      this.statusBar.backgroundColorByHexString("#aa48b9");
       this.splashScreen.hide();
       this.fetchRouteData();
       this.exipAppSubscription();
@@ -133,7 +133,7 @@ export class AppComponent {
 
         } else {
           const alert = await this.alertController.create({
-            header: 'Show your Love by Giving 5 Stars! Thank You.',
+            header: 'Love Post Malone? Please rate 5 star!',
             buttons: [{
               text: 'Rate Us',
               handler: () => {

@@ -14,15 +14,10 @@ export class MoreAppsPage implements OnInit {
       navigationLink: "https://play.google.com/store/apps/details?id=com.corlogix.lovequotes"
     },
     {
-      appName: "XXXTentacion Quotes",
-      imagesrc: "assets/images/xxxten.jpg",
-      navigationLink: "https://play.google.com/store/apps/details?id=com.corlogix.tentacion"
-    },
-    {
-      appName: "Sad Shayari",
-      imagesrc: "assets/images/sad-shayari.png",
-      navigationLink: "https://play.google.com/store/apps/details?id=com.corlogix.sadshayari"
-    },
+      appName: "Good Morning Messages",
+      imagesrc: "assets/images/gm.png",
+      navigationLink: "https://play.google.com/store/apps/details?id=com.corlogix.gmwife"
+    }
   ]
 
   constructor() { }

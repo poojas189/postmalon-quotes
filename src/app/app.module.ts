@@ -1,4 +1,4 @@
-import { HttpClientModule } from '@angular/common/http';
+
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouteReuseStrategy } from '@angular/router';
@@ -20,7 +20,7 @@ import { AngularFireDatabaseModule } from '@angular/fire/database';
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
-  imports: [BrowserModule, HttpClientModule, AngularFireModule.initializeApp(environment.firebaseConfig),
+  imports: [BrowserModule, AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFirestoreModule,AngularFireDatabaseModule, IonicStorageModule.forRoot(),
      IonicModule.forRoot({ animated: false }), AppRoutingModule],
   providers: [

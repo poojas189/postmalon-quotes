@@ -16,7 +16,7 @@ export class DataService {
     public storage: Storage) {
 
     this.init();
-    this.db.object('quoteArray').valueChanges().subscribe(res => {
+    this.db.object('postmaloneData').valueChanges().subscribe(res => {
       this.datahandlerService._quoteDatabaseSubject.next(res);
       this.createPushNotification(res);
     });
@@ -34,8 +34,8 @@ export class DataService {
 
   createPushNotification(data) {
 
-    let notificationQuote = data[Math.floor(Math.random() * (data.length-2))].quoteList[Math.floor(Math.random() * 19)].replace(/<br>/g, '');
-   
+    let notificationQuote = data[Math.floor(Math.random() * (data.length-2))].quoteList[Math.floor(Math.random() * 12)].replace(/<br>/g, '');
+  //  console.log(notificationQuote);
     this.localNotifications.schedule({
       text: notificationQuote,
       foreground: true,
@@ -43,8 +43,8 @@ export class DataService {
       trigger: {
         count: 1,
         every: {
-          hour: 9,
-          minute: 30
+          hour: 10,
+          minute: 45
         }
       },
 

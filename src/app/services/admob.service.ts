@@ -12,28 +12,30 @@ export class AdmobService {
   bannerConfig: AdMobFreeBannerConfig;
   interstitialConfig: AdMobFreeInterstitialConfig;
 
-  isIntervalEnd = true;
+  isIntervalEnd: boolean = true;
   displayAds: any;
+  adConfig: any;
 
   constructor(public platform: Platform,
     private db: AngularFireDatabase,
     public datahandlerService: DatahandlerService,
     private admobFree: AdMobFree) {
 
-    this.bannerConfig = {
-      isTesting: true,
-      autoShow: true,
-      // id: 'ca-app-pub-5152650426066889/3389309734'
-    };
+    this.db.object('postmaloneAdsConfig').valueChanges().subscribe(res => {
+      this.adConfig = res;
+      console.log(this.adConfig);
+      this.displayAds = this.adConfig.showAds;
 
-    this.interstitialConfig = {
-      isTesting: true,
-      autoShow: false,
-      // id: 'ca-app-pub-5152650426066889/7480597984'
-    };
-
-    this.db.object('showAds').valueChanges().subscribe(res => {
-      this.displayAds = res;
+      this.bannerConfig = {
+        // isTesting: true,
+        autoShow: true,
+        id: this.adConfig.bannerID
+      };
+      this.interstitialConfig = {
+        // isTesting: true,
+        autoShow: false,
+        id: this.adConfig.interID
+      }
 
       if (this.displayAds) {
         platform.ready().then(() => {
@@ -88,7 +90,7 @@ export class AdmobService {
 
       setTimeout(() => {
         this.isIntervalEnd = true;
-      }, 15000);
+      }, 20000);
 
     }
 

@@ -5,6 +5,9 @@
 </ion-header>
 
 <ion-content>
+  <div class="image-loader" *ngIf="!quotesData">
+    <ion-spinner name="bubbles" color="light"></ion-spinner>
+  </div>
   <ion-card *ngFor="let quote of quotesData" class="card-bg-primary" (click)="navigateToQuotelist(quote.id)">
     <ion-card-header>
       <ion-card-title color="dark">

@@ -10,7 +10,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <meta-data android:name="com.google.android.gms.ads.APPLICATION_ID" tools:replace="android:value" android:value="ca-app-pub-5152650426066889~1262318772" />
+        <meta-data android:name="com.google.android.gms.ads.APPLICATION_ID" tools:replace="android:value" android:value="ca-app-pub-3378766083665427~5019006701" />
         <activity
             android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale|smallestScreenSize|screenLayout|uiMode"
             android:name="com.corlogix.postmalone.MainActivity"
