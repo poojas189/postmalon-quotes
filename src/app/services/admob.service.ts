@@ -23,7 +23,7 @@ export class AdmobService {
 
     this.db.object('postmaloneAdsConfig').valueChanges().subscribe(res => {
       this.adConfig = res;
-      console.log(this.adConfig);
+      // console.log(this.adConfig);
       this.displayAds = this.adConfig.showAds;
 
       this.bannerConfig = {
